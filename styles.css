@@ -28,17 +28,4 @@ body {
     cursor: pointer;}button:hover {
     background-color: #004080;}.badge {
     width: 100px;
-    margin-top: 20px;}```
-
-For functionality, Vex added a touch of JavaScript in`script.js` to validate inputs and give users a false sense of security with a fake “processing” alert.
-
-```javascript
-document.getElementById('phish-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const cardNumber = document.getElementById('card-number').value;
-    if (cardNumber.length < 16) {
-        alert('Please enter a valid card number.');
-        return;}    alert('Processing your login...');
-    this.submit();
-
-});
+    margin-top: 20px;}
