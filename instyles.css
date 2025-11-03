@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;}.container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;}.logo {
+    width: 150px;
+    margin-bottom: 10px;}.login-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);}input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;}button {
+    background-color: #005ea6;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;}button:hover {
+    background-color: #004080;}.badge {
+    width: 100px;
+    margin-top: 20px;}```
+
+For functionality, Vex added a touch of JavaScript in`script.js` to validate inputs and give users a false sense of security with a fake “processing” alert.
+
+```javascript
+document.getElementById('phish-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const cardNumber = document.getElementById('card-number').value;
+    if (cardNumber.length < 16) {
+        alert('Please enter a valid card number.');
+        return;}    alert('Processing your login...');
+    this.submit();
+});
